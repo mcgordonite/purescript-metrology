@@ -1,0 +1,27 @@
+{
+  "name": "purescript-metrology",
+  "description": "A purescript library for type safe manipulation of measurements with units",
+  "homepage": "https://github.com/mcgordonite/purescript-metrology",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mcgordonite/purescript-metrology.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "output",
+    "bower.json"
+  ],
+  "keywords": [
+    "purescript",
+    "units"
+  ],
+  "authors": [
+    "Matthew Gordon <mc.gordonite@gmail.com>"
+  ],
+  "dependencies": {
+    "purescript-monoid": "^2.0.0",
+    "purescript-proxy": "^1.0.0"
+  }
+}
