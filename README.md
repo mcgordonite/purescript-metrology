@@ -1,5 +1,7 @@
 # purescript-metrology
 
+[![Build Status](https://travis-ci.org/mcgordonite/purescript-metrology.svg?branch=master)](https://travis-ci.org/mcgordonite/purescript-metrology)
+
 A Purescript library for checking manipulation of measurements with units at
 compile time.
 
