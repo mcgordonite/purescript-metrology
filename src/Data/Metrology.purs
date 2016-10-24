@@ -71,13 +71,13 @@ infixl 7 scaleQRight as .*
 class ProductUnit a b c | a b → c
 
 -- | Multiply two quantitys' values and units together.
-mulQ ∷ ∀ a t. Ring t ⇒ Quantity a t → ∀ b. Quantity b t → ∀ c. ProductUnit a b c ⇒ Quantity c t
+mulQ ∷ ∀ a b c t. (Ring t, ProductUnit a b c) ⇒ Quantity a t → Quantity b t → Quantity c t
 mulQ a b = pure (extract a * extract b)
 
 infixl 7 mulQ as .*.
 
 -- | Divide one quantity's value and unit by another's value and unit.
-divQ ∷ ∀ c t. EuclideanRing t ⇒ Quantity c t → ∀ b. Quantity b t → ∀ a. ProductUnit a b c ⇒ Quantity a t
+divQ ∷ ∀ a b c t. (EuclideanRing t, ProductUnit a b c) ⇒ Quantity c t → Quantity b t → Quantity a t
 divQ a b = pure (extract a / extract b)
 
 infixl 7 divQ as ./.
